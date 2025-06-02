@@ -1,20 +1,20 @@
-pipeline{
-    agent  any
-    stages{
+pipeline {
+    agent any
+
+    stages {
         stage('Checkout code') {
             steps {
-                // Checkout the code from the repository
-                bat"sample project fetch from git"
+                bat 'echo "Sample project fetched from git"'
             }
         }
-        stage('Build'){
-            steps{
-                bat"Building bricks"
+        stage('Build') {
+            steps {
+                bat 'echo "Building bricks"'
+            }
         }
-        }
-        stage('Deployement'){
-            steps{
-                bat"Deploying"
+        stage('Deployment') {
+            steps {
+                bat 'echo "Deploying"'
             }
         }
     }
