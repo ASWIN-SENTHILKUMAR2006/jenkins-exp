@@ -1,0 +1,21 @@
+pipeline{
+    agent  any
+    stages{
+        stage('Checkout code') {
+            steps {
+                // Checkout the code from the repository
+                bat"sample project fetch from git"
+            }
+        }
+        stage('Build'){
+            steps{
+                bat"Building bricks"
+        }
+        }
+        stage('Deployement'){
+            steps{
+                bat"Deploying"
+            }
+        }
+    }
+}
